@@ -2,17 +2,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>タイピング練習　ver1</title>
+        <title>タイピング練習　ver2</title>
 <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="typing.css" />
     <audio src ="_sound_anime_mp3_incorrect1.mp3" id="missaudio">現環境では音が鳴りません</audio>
     <audio src ="_sound_battle_mp3_handgun-out-bullets1.mp3" id="correctaudio"></audio>
-<div id="aaa">stertをクリックすると始まります。制限時間90秒</div>
+<div id="aaa">stertをクリック</div>
 stertをクリックすると始まります。制限時間90秒
  <script>
+
 let elm=document.getElementById("aaa");
 elm.style.position="absolute";
-
+//ゆーあーるえる　https://parukia0804.github.io/-0804.github.io/
 elm.onmousemove=function(e)
 {
 let x =(Math.random()*400).toFixed();
@@ -20,8 +21,19 @@ let y =(Math.random()*400).toFixed();
 elm.style.left=x +"px";
 elm.style.top=y +"px";
 }
-var wordlist = ["bukkuohunanoni<br>honne-zyan。","waraukadoniha、<br>hukukitaru","umanomimininenbutu。","parukiaarigatou。","inotigamottainai。","soretteanatanokansoudesuyone。"];
-var wordlistJapanese = ["ブックオフなのに本ねーじゃん。","笑う門には、福来たる","馬の耳に念仏。","パルキアありがとう。","命がもったいない。","それってあなたの感想ですよね。"];
+var wordlist = ["bukkuohunanoni<br>honne-zyan。","waraukadoniha、<br>hukukitaru。","umanomimininenbutu。","parukiaarigatou。","inotigamottainai。",
+"soretteanatanokansoudesuyone。","wakamegohann","e、watasinonensyuuhikusugi。","penpainappo-<br>appo-penn","sakehanondemonomareruna。",
+"akirametara、<br>sokodesiaisyuuryoudesuyo。","yumenaraba、dorehodo、yokattadesyou。","gomenn、doukyuukainihaikemasenn。","kekkonsitanoka、oreigainoyatuto。"
+,"zigokunogoukaniyakaretemorauze。","tyottonaniitterukawakaranai。","hou、tansannnukiko-radesuka。","zyobantyuubansyuuban、sukiganaitoomouyo。"];
+var wordlistJapanese = ["ブックオフなのに本ねーじゃん。","笑う門には、福来たる。","馬の耳に念仏。","パルキアありがとう。","命がもったいない。",
+"それってあなたの感想ですよね。","わかめご飯","え、私の年収低すぎ。","PPAP<br>(ペンパイナッポーアッポーペン)","酒は飲んでも飲まれるな。",
+"諦めたら、<br>そこで試合終了ですよ。","夢ならば、どれほど、よかったでしょう。","ごめん、同級会にはいけません。","結婚したのか、俺以外の奴と。"
+,"地獄の業火に焼かれてもらうぜ。","ちょっと何言ってるか分からない。","ほう、炭酸抜きコーラですか。","序盤中盤終盤、隙がないと思うよ。"];
+let atari=1+Math.floor(Math.random()*100);
+if(atari>98)
+{
+  document.write("当たり！(確率約１％)。<BR>");
+}
      var time_limit = 90;
      var readytime = 3;
      var score;
